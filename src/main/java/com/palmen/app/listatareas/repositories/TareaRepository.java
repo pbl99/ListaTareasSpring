@@ -1,9 +1,14 @@
 package com.palmen.app.listatareas.repositories;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.palmen.app.listatareas.models.entities.Tarea;
 
-public interface TareaRepository extends JpaRepository<Tarea, Long>{
+@Repository
+public interface TareaRepository extends JpaRepository<Tarea, Integer> {
 
+	Optional<Tarea> findByTitulo(String titulo);
 }

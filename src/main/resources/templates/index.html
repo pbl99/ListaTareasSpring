@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+
+<body>
+	<h1>LISTA DE TAREAS</h1>
+	<h3>Crea una tarea</h3>
+
+	<form action="/crearTarea" method="post">
+		<div>
+			<label for="titulo">Título</label>
+			<div>
+				<input type="text" id="titulo" name="titulo">
+			</div>
+		</div>
+		<div>
+			<label for="descripcion">Descripción</label>
+			<div>
+				<input type="text" id="descripcion" name="descripcion">
+			</div>
+		</div>
+		<div>
+			<div>
+				<input type="submit" value="Crear">
+			</div>
+		</div>
+	</form>
+	<h3>Actualiza una tarea</h3>
+	<form action="/actualizarTarea" method="post">
+		<div>
+			<label for="id">Id</label>
+			<div>
+				<input type="text" id="id" name="id">
+			</div>
+		</div>
+		<div>
+			<label for="titulo">Título</label>
+			<div>
+				<input type="text" id="titulo" name="titulo">
+			</div>
+		</div>
+		<div>
+			<label for="descripcion">Descripción</label>
+			<div>
+				<input type="text" id="descripcion" name="descripcion">
+			</div>
+		</div>
+		<div>
+			<div>
+				<input type="submit" value="Actualizar">
+			</div>
+		</div>
+	</form>
+	<h3>Encuentra una tarea</h3>
+	<form action="/encontrarTarea" method="post">
+		<div>
+			<label for="id">Id</label>
+			<div>
+				<input type="text" id="id" name="id">
+			</div>
+			<div>
+				<div>
+					<input type="submit" value="Encontrar">
+				</div>
+			</div>
+	</form>
+	<h3>Elimina una tarea</h3>
+	<form action="/eliminarTarea" method="post">
+		<div>
+			<label for="titulo">Título</label>
+			<div>
+				<input type="text" id="titulo" name="titulo">
+			</div>
+			<div>
+				<div>
+					<input type="submit" value="Eliminar">
+				</div>
+			</div>
+	</form>
+
+</body>
+
+</html>
