@@ -1,5 +1,6 @@
 package com.palmen.app.listatareas.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import com.palmen.app.listatareas.models.entities.Tarea;
 import com.palmen.app.listatareas.repositories.TareaRepository;
 
 @Service
-public class TareaService {
+public class TareaServiceImpl implements ITareaService{
 
 	@Autowired
 	private TareaRepository tareaRepository;
@@ -39,6 +40,11 @@ public class TareaService {
 	@Transactional(readOnly = true)
 	public Optional<Tarea> encontrarTareaPorId(Integer id) {
 		return tareaRepository.findById(id);
+	}
+
+	@Transactional(readOnly = true)
+	public List<Tarea> encontrarTareas() {
+		return tareaRepository.findAll();
 	}
 
 	@Transactional

@@ -7,12 +7,13 @@
 </head>
 
 <body>
-	<h3>Lista de Tareas</h3>
-	<li>
-		<ul th:text="${}"></ul>
-		<ul th:text="${}"></ul>
-		<ul th:text="${}"></ul>
-	</li>
+	<h3>Detalles de las Tareas</h3>
+	<div th:each="tar: ${tarea}">
+		<p>ID: <span th:text="${tar.id}"></span></p>
+		<p>Título: <span th:text="${tar.titulo}"></span></p>
+		<p>Descripción: <span th:text="${tar.descripcion}"></span></p>
+		<br>
+	</div>
 </body>
 
 </html>

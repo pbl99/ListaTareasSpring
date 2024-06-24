@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Error 404</title>
+</head>
+
+<body>
+	<h1>Error 404 - Página No Encontrada</h1>
+	<p>Lo sentimos, la página que estás buscando no existe.</p>
+	<p ${timestamp}></p>
+	<a href="/">Volver al inicio</a>
+	<div th:text="${timestamp}"></div>
+</body>
+
+</html>
